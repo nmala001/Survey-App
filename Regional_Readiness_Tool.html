@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+    
+  
+ <script type="text/javascript" src="https://unpkg.com/survey-knockout"></script>
+    
+  
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    
+  
+
+  <style type="text/css">
+    .btn-green {
+  background-color: #1ab394;
+  color: #fff;
+  border-radius: 3px; }
+  .btn-green:hover, .btn-green:focus {
+    background-color: #18a689;
+    color: #fff; }
+
+.bar-green {
+  background-color: #1ab394;
+  color: #fff;
+  padding-left: 10px; }
+
+  .panel-footer {
+    text-align: right;
+    background-color: #fff; }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      width: 960px;
+      height: 500px;
+      position: relative; }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        position: center; }
+
+        .toolTip {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          position: absolute;
+          display: none;
+          width: auto;
+          height: auto;
+          background: none repeat scroll 0 0 white;
+          border: 0 none;
+          border-radius: 8px 8px 8px 8px;
+          box-shadow: -3px 3px 15px #888888;
+          color: black;
+          font: 12px sans-serif;
+          padding: 5px;
+          text-align: center; }
+
+          text {
+            font: 10px sans-serif;
+            color: white; }
+
+            text.value {
+              font-size: 120%;
+              fill: white; }
+
+              .axisHorizontal path {
+                fill: none; }
+
+                .axisHorizontal .tick line {
+                  stroke-width: 1;
+                  stroke: rgba(0, 0, 0, 0.2); }
+
+                  .bar {
+                    fill: steelblue;
+                    fill-opacity: 0.9; }
+
+  </style>
+
+  <title>Real example</title>
+
+  
+    
+
+
+
+
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+var data = [];
+var json = { title: "Entrepreneurs need access to", showProgressBar: "top", pages: [
+    {questions: [
+        { type: "matrix", name: "Quality", title: "Openness to Entrepreneurship",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "1.1  The region views high-growth, entrepreneurial businesses as the key to its long-term success." },
+             { value: "2", text: "1.2  The local culture celebrates entrepreneurial success and does not punish failure." },
+                { value: "3", text: "1.3  Successful entrepreneurs play leadership roles in local economic development programs and policy-making bodies." }
+              
+         
+         ]},
+         
+         
+        { type: "matrix", name: "Quality2", title: "Balanced Economic Development Strategies",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "2.1 Economic development grow your own strategies are as important and well funded as traditional attraction and retention programs." },
+             { value: "2", text: "2.2 There is close coordination between organizations responsible for grow your own, attraction, and retention programs." },
+                { value: "3", text: "2.3  Business retention programs also seek to help business spin out new ventures and reinvent themselves to meet changing market needs." }
+              
+         
+         ]},
+         
+         { type: "matrix", name: "Quality3", title: "Robust Entrepreneurship Programs",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "3.1  There are easily accessible entrepreneurship training and mentoring programs led by the public sector, the private sector, or both." },
+             { value: "2", text: "3.2  There are affordable and domain/cluster-specific professional services available for early-stage, growth-oriented ventures (patent attorneys, CPAs, consultants, etc.)." },
+                { value: "3", text: "3.3  There are formal and informal networks that entrepreneurs can readily join to meet like-minded people and access services." }
+              
+         ]},
+         
+          { type: "matrix", name: "Quality4", title: "Prudent Investment Processes",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "4.1  The region has a history of seeking and allocating local resources (taxes, bonds, special assessments) to support balanced economic development strategies.)" },
+             { value: "2", text: "4.2  There are objective processes in place to support balanced economic development programs and measure their success over the long-term." },
+                { value: "3", text: "4.3  There is open and sophisticated understanding of economic development strategies in the local media and among informal decision-makers and influencers." }
+              
+         ]},
+		 
+		 { type: "matrix", name: "Quality5", title: "An Expansive View",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "5.1  The region and culture is open to ideas that originate outside the boundaries of the local municipalities." },
+             { value: "2", text: "5.2  The region's R&D organizations (universities, government labs, commercial R&D) are open to working with local businesses to commercialize new technologies and have effective processes in place to do so." },
+                { value: "3", text: "5.3  Major local businesses are open to working with new ventures to test and evaluate new products and services (local Market Pull)." }
+              
+         ]},
+		 
+		 { type: "matrix", name: "Quality6", title: "Infrastructure",
+            columns: [{ value: 0, text: "Never" },
+                { value: 1, text: "Sometimes" },
+                { value: 2, text: "Often" },
+                { value: 3, text: "Usually" },
+                { value: 4, text: "Always" }],
+            rows: [{ value: "1", text: "6.1  The region has a high-quality airport and/or high-speed train service with regular connections to key financial and technology centers.)" },
+             { value: "2", text: "6.2  The region has world-class connectivity (bandwidth, telecom) and ubiquitous wireless coverage." },
+                { value: "3", text: "6.3  The region has an effective and functioning highway system, and a public transportation system, that connects local universities, business centers, and other technology and financial assets." }
+              
+         ]},
+         
+         
+         
+         
+         
+        
+         
+         { type: "rating", name: "satisfaction", title: "How satisfied are you with the Survey?",
+            mininumRateDescription: "Not Satisfied", maximumRateDescription: "Completely satisfied" },
+        { type: "rating", name: "recommend friends", visibleIf: "{satisfaction} > 3",
+            title: "How did you find the survey?",
+            mininumRateDescription: "Will not recommend", maximumRateDescription: "I will recommend" },
+        { type: "comment", name: "suggestions", title:"What would make you more satisfied with the Survey?", }
+    ]},
+         
+            
+            
+         
+    { questions: [
+        { type: "text", name: "email",
+            title: "Thank you for taking our survey. Your survey is almost complete, Please enter your feedback, then press the 'Submit' button."}
+    ]}
+]};
+
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+Survey.defaultBootstrapCss.progressBar = "bar-green";
+Survey.Survey.cssType = "bootstrap";
+
+
+
+var survey = new Survey.Model(json);
+
+survey.onComplete.add(function(result) {
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality"]);
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality2"]);
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality3"]);
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality4"]);
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality5"]);
+  document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data["Quality6"]);
+  
+  var quality1_total = 0;
+  var quality2_total = 0;
+  var quality3_total = 0;
+  var quality4_total = 0;
+  var quality5_total = 0;
+  var quality6_total = 0;
+  var quality1_avg = 0;
+  var quality2_avg = 0;
+  var quality3_avg = 0;
+  var quality4_avg = 0;
+  var quality5_avg = 0;
+  var quality6_avg = 0;
+  var final_percentage = 0;
+  
+  
+  
+  for(var key in result.data["Quality"]) {
+   
+   
+     
+       quality1_total +=  parseInt(result.data["Quality"][key]);
+    
+     } 
+	 
+	 for(var key in result.data["Quality2"]) {
+  
+ 
+  
+    quality2_total +=  parseInt(result.data["Quality2"][key]);
+  }
+  for(var key in result.data["Quality3"]) {
+   
+   
+     
+       quality3_total +=  parseInt(result.data["Quality3"][key]);
+    
+     } 
+     
+     for(var key in result.data["Quality4"]) {
+   
+  
+     
+       quality4_total +=  parseInt(result.data["Quality4"][key]);
+    
+     } 
+	 
+	 for(var key in result.data["Quality5"]) {
+   
+   
+     
+       quality5_total +=  parseInt(result.data["Quality5"][key]);
+    
+     } 
+	 for(var key in result.data["Quality6"]) {
+   
+
+     
+       quality6_total +=  parseInt(result.data["Quality6"][key]);
+    
+     } 
+     
+     
+  
+  document.querySelector('#result').innerHTML = "result total: " +  quality1_total;
+  
+  quality1_avg = (quality1_total/3).toFixed(2);
+  
+   document.querySelector('#result').innerHTML = "1. Openness to Entrepreneurship(Summary Score): " +  quality1_avg;
+   
+   
+  // document.querySelector('#result2').innerHTML = "result total: " +  quality2_total;
+  
+  quality2_avg = (quality2_total/3).toFixed(2);
+  
+    document.querySelector('#result2').innerHTML = "2.  Balanced Economic Development Strategies(Summary Score): " +  quality2_avg;
+  //document.querySelector('#result2').innerHTML = "result total: " +  quality2_total;
+  
+  quality3_avg = (quality3_total/3).toFixed(2);
+  
+    document.querySelector('#result3').innerHTML = "3.  Robust Entrepreneurship Programs (Summary Score):" +  quality3_avg;
+    
+  quality4_avg = (quality4_total/3).toFixed(2);
+  
+    document.querySelector('#result4').innerHTML = "4.  Prudent Investment Processes(Summary Score):" +  quality4_avg;
+	
+	quality5_avg = (quality5_total/3).toFixed(2);
+  
+    document.querySelector('#result5').innerHTML = "5.  An Expansive View (Summary Score):" +  quality5_avg;
+	
+	quality6_avg = (quality6_total/3).toFixed(2);
+  
+    document.querySelector('#result6').innerHTML = "6.  Infrastructure(Summary Score):" +  quality6_avg;
+  
+  
+ /*var dataArray = result.data["Quality"];
+  document.querySelector('#result').innerHTML = "result: " + dataArray.length;*/
+  
+  final_percentage = ((parseFloat(quality1_avg) + parseFloat(quality2_avg) + parseFloat(quality3_avg) + parseFloat(quality4_avg) + parseFloat(quality5_avg) + parseFloat(quality6_avg))/24)*100;
+  
+  document.querySelector('#final').innerHTML = "Total Score(In Percentage):" +final_percentage +"%";
+  
+  
+  
+  if(final_percentage >= 0 && final_percentage <= 20)
+  
+  {
+  document.querySelector('#score').innerHTML = "Weak Score – Little Readiness – Significant capacity building is required";
+  
+ 
+  }
+  else if(final_percentage > 20 && final_percentage <= 40)
+  
+  {
+  document.querySelector('#score2').innerHTML = "Soft Score – Some Readiness – Gap filling is necessary";
+  
+  }
+  else if(final_percentage > 40 && final_percentage <= 60)
+  
+  {
+  document.querySelector('#score3').innerHTML = "Good Score – Readiness Potential – begin to build on existing assets";
+  
+  }
+  
+  else if(final_percentage > 60 && final_percentage <= 80)
+  
+  {
+  document.querySelector('#score4').innerHTML = "Strong Score – Readiness Present – Aggressively build on existing assets";
+  
+  }
+  
+  else if(final_percentage > 80 && final_percentage <= 100)
+  
+  {
+  document.querySelector('#score5').innerHTML = "Very Strong Score – Considerable Readiness – Energize your entrepreneurs!!!";
+  
+  }
+  data = [
+        {label:"1.Openness to Entrepreneurship", value:quality1_avg},
+        {label:"2.Balanced Economic Development Strategies", value:quality2_avg},
+        {label:"3.Robust Entrepreneurship Programs", value:quality3_avg},
+        {label:"4.Prudent Investment Processes", value:quality4_avg},
+		{label:"5.An Expansive View", value:quality5_avg},
+        {label:"6.Infrastructure", value:quality6_avg}
+  
+  ];
+  barGraph(data);
+});
+survey.render("surveyElement");
+
+function barGraph(data){
+
+        console.log(data);
+            
+    var div = d3.select("body").append("div").attr("class", "toolTip");
+    var axisMargin = 20,
+
+            margin = 40,
+            valueMargin = 4,
+            width = parseInt(d3.select('body').style('width'), 10),
+            height = parseInt(d3.select('body').style('height'), 10),
+            barHeight = (height-axisMargin-margin*2)* 0.4/data.length,
+            barPadding = (height-axisMargin-margin*2)*0.6/data.length,
+            data, bar, svg, scale, xAxis, labelWidth = 0;
+
+    max = d3.max(data, function(d) { return d.value; });
+
+    svg = d3.select('.graph')
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+
+    bar = svg.selectAll("g")
+            .data(data)
+            .enter()
+            .append("g");
+
+    bar.attr("class", "bar")
+            .attr("cx",0)
+            .attr("transform", function(d, i) {
+                return "translate(" + margin + "," + (i * (barHeight + barPadding) + barPadding) + ")";
+            });
+
+    bar.append("text")
+            .attr("class", "label")
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em") //vertical align middle
+            .text(function(d){
+                return d.label;
+            }).each(function() {
+        labelWidth = Math.ceil(Math.max(labelWidth, this.getBBox().width));
+    });
+
+    scale = d3.scale.linear()
+            .domain([0, max])
+            .range([0, width - margin*2 - labelWidth]);
+
+    xAxis = d3.svg.axis()
+            .scale(scale)
+            .tickSize(-height + 2*margin + axisMargin)
+            .orient("bottom");
+
+    bar.append("rect")
+            .attr("transform", "translate("+labelWidth+", 0)")
+            .attr("height", barHeight)
+            .attr("width", function(d){
+                return scale(d.value);
+            });
+
+    bar.append("text")
+            .attr("class", "value")
+            .attr("y", barHeight / 2)
+            .attr("dx", -valueMargin + labelWidth) //margin right
+            .attr("dy", ".35em") //vertical align middle
+            .attr("text-anchor", "end")
+            .attr("x", function(d){
+                var width = this.getBBox().width;
+                return Math.max(width + valueMargin, scale(d.value));
+            });
+
+    bar
+            .on("mousemove", function(d){
+                div.style("left", d3.event.pageX+10+"px");
+                div.style("top", d3.event.pageY-25+"px");
+                div.style("display", "inline-block");
+                div.html((d.label)+"<br>"+(d.value));
+            });
+    bar
+            .on("mouseout", function(d){
+                div.style("display", "none");
+            });
+
+    svg.insert("g",":first-child")
+            .attr("class", "axisHorizontal")
+            .attr("transform", "translate(" + (margin + labelWidth) + ","+ (height - axisMargin - margin)+")")
+            .call(xAxis);
+
+
+}
+
+
+
+}//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
+<div id="surveyElement"></div>
+
+
+ 
+ 
+ 
+
+
+<table>
+	
+	
+	<tr>	
+	<td><strong><p id="result"><strong></p><td>
+	</tr>
+	<tr>
+	<div>
+	<td><strong><p id="result2"></p></strong></td>
+	</tr>
+	</div>
+	<div>
+	<tr>
+	<td><strong><p id="result3"></p></strong></td>
+	</tr>
+	</div>
+	<div>
+	<tr>
+	<td><strong><p id="result4"></p></strong></td>
+    </tr>
+	</div>
+	<div>
+	<tr>
+	<td><strong><p id="result5"></p></strong></td>
+	</tr>
+	</div>
+	<div>
+	<tr>
+	<td><strong><p id="result6"></p></strong></td>
+	</tr>
+    </div>
+	
+	<tr>
+	
+
+</table>
+
+
+
+
+
+<strong><p id="final"></p></strong>
+
+<strong><p id="score"></p></strong>
+<strong><p id="score2"></p></strong>
+<strong><p id="score3"></p></strong>
+<strong><p id="score4"></p></strong>
+<strong><p id="score5"></p></strong>
+
+
+
+
+
+<div class= "graph" id= "barGraph"></div>
+
+
+
+
+
+
+
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "us7x47os"
+    }], "*")
+  }
+</script>
+
+</body>
+
+</html>
